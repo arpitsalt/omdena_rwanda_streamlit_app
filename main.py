@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from streamlit_option_menu import option_menu
+import streamlit_option_menu
 
 st.set_page_config(page_title="Omdena Rwanda", page_icon=":rwanda:", initial_sidebar_state="expanded")
 img_banner = Image.open("assets/banner.png")
@@ -80,7 +80,7 @@ def contributors_page():
 
 with st.sidebar:
     st.image(img_rwanda)
-    selected = option_menu(
+    selected = streamlit_option_menu.option_menu(
         menu_title=None,  # required
         options=["Home", "About", "Model", "Contributors"],
         icons=["house", "info-circle", "gear", "people"],  # optional
