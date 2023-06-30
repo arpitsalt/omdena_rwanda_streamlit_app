@@ -8,9 +8,9 @@ from stqdm import stqdm
 import random
 from streamlit_option_menu import option_menu
 
-
 # Configuring Streamlit
 st.set_page_config(page_title="Omdena Rwanda", page_icon=":rwanda:", initial_sidebar_state="expanded")
+
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -73,8 +73,6 @@ def model_section():
     col1, col2, col3 = st.columns(3, gap="large")
 
     # setting random values
-    for i in range(17):
-        st.session_state[f"test_slider{i}"] = random.randint(0, 1000)
 
     with col1:
         ColourTCU = st.slider(label="Colour (TCU)", min_value=0, max_value=1000, value=None, step=1, format="%f",
