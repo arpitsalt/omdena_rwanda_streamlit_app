@@ -34,7 +34,8 @@ def home_page():
     st.write(f"""# Water Inspection System""", unsafe_allow_html=True)
     st.image(img_banner)
 
-    st.write(f"""<h2>The Problem</h2> <p>Access to clean water is a critical challenge in many parts of the world, 
+    st.write(f"""<h2>The Problem</h2>   
+    <p>Access to clean water is a critical challenge in many parts of the world, 
     including Rwanda. Water quality prediction is important for ensuring the availability of safe and clean water for 
     drinking, agriculture, and other purposes. However, traditional methods for water quality prediction are often 
     time-consuming and costly, and they may not provide accurate and timely information. To address this challenge, 
@@ -49,7 +50,7 @@ def home_page():
 
 
 def about_page():
-    st.write(f"""<h2>Project background</h2>""", unsafe_allow_html=True)
+    st.write(f"""<h1>Project background</h1><hr>""", unsafe_allow_html=True)
     st.write("""
         <p>Rwanda is a landlocked country located in East Africa, 
         with a population of approximately 13 million people. Despite efforts to improve access to clean water, 
