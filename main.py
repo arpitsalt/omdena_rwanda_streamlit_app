@@ -75,42 +75,42 @@ def model_section():
     # setting random values
 
     with col1:
-        ColourTCU = st.slider(label="Colour (TCU)", min_value=0, max_value=1000, value=None, step=1, format="%f",
+        ColourTCU = st.number_input(label="Colour (TCU)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
                               key="test_slider0")
-        TurbidityNTU = st.slider(label="Turbidity (NTU)", min_value=0, max_value=1000, value=None, step=1, format="%f",
+        TurbidityNTU = st.number_input(label="Turbidity (NTU)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
                                  key="test_slider1")
-        pH = st.slider(label="pH", min_value=0, max_value=1000, value=None, step=1, format="%f", key="test_slider2")
-        ConductivityuS = st.slider(label="Conductivity (uS/cm)", min_value=0, max_value=1000, value=None, step=1,
+        pH = st.number_input(label="pH", min_value=0.0, max_value=1000.0, step=0.1, format="%f", key="test_slider2")
+        ConductivityuS = st.number_input(label="Conductivity (uS/cm)", min_value=0.0, max_value=1000.0, step=0.1,
                                    format="%f", key="test_slider3")
-        TotalDissolvedSolids = st.slider(label="Total Dissolved Solids (mg/l)", min_value=0, max_value=1000, value=None,
-                                         step=1, format="%f", key="test_slider4")
-        TotalHardness = st.slider(label="Total Hardness (mg/l as CaCO3)", min_value=0, max_value=1000, value=None,
-                                  step=1, format="%f", key="test_slider5")
+        TotalDissolvedSolids = st.number_input(label="Total Dissolved Solids (mg/l)", min_value=0.0, max_value=1000.0,
+                                         step=0.1, format="%f", key="test_slider4")
+        TotalHardness = st.number_input(label="Total Hardness (mg/l as CaCO3)", min_value=0.0, max_value=1000.0,
+                                  step=0.1, format="%f", key="test_slider5")
 
     with col2:
-        Aluminium = st.slider(label="Aluminium (mg/l)", min_value=0, max_value=1000, value=None, step=1, format="%f",
+        Aluminium = st.number_input(label="Aluminium (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
                               key="test_slider6")
-        Chloride = st.slider(label="Chloride (mg/l)", min_value=0, max_value=1000, value=None, step=1, format="%f",
+        Chloride = st.number_input(label="Chloride (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
                              key="test_slider7")
-        Iron = st.slider(label="Iron (mg/l)", min_value=0, max_value=1000, value=None, step=1, format="%f",
+        Iron = st.number_input(label="Iron (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
                          key="test_slider8")
-        Sodium = st.slider(label="Sodium (mg/l)", min_value=0, max_value=1000, value=None, step=1, format="%f",
+        Sodium = st.number_input(label="Sodium (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
                            key="test_slider9")
-        Sulphate = st.slider(label="Sulphate (mg/l)", min_value=0, max_value=1000, value=None, step=1, format="%f",
+        Sulphate = st.number_input(label="Sulphate (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
                              key="test_slider10")
-        Zinc = st.slider(label="Zinc (mg/l)", min_value=0, max_value=1000, value=None, step=1, format="%f",
+        Zinc = st.number_input(label="Zinc (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
                          key="test_slider11")
 
     with col3:
-        Magnesium = st.slider(label="Magnesium (mg/l)", min_value=0, max_value=1000, value=None, step=1, format="%f",
+        Magnesium = st.number_input(label="Magnesium (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
                               key="test_slider12")
-        Calcium = st.slider(label="Calcium (mg/l)", min_value=0, max_value=1000, value=None, step=1, format="%f",
+        Calcium = st.number_input(label="Calcium (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
                             key="test_slider13")
-        Potassium = st.slider(label="Potassium (mg/l)", min_value=0, max_value=1000, value=None, step=1, format="%f",
+        Potassium = st.number_input(label="Potassium (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
                               key="test_slider14")
-        Nitrate = st.slider(label="Nitrate (mg/l)", min_value=0, max_value=1000, value=None, step=1, format="%f",
+        Nitrate = st.number_input(label="Nitrate (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
                             key="test_slider15")
-        Phosphate = st.slider(label="Phosphate (mg/l)", min_value=0, max_value=1000, value=None, step=1, format="%f",
+        Phosphate = st.number_input(label="Phosphate (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
                               key="test_slider16")
         st.write("<br>", unsafe_allow_html=True)
         predict_button = st.button('  Predict Water Quality  ')
