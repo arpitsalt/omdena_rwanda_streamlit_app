@@ -141,7 +141,7 @@ def contributors_page():
         for i in range(10):
             st.write("- contributor name")
 
-    st.write("<h1>A heart felt thankyou to all of our contributors</h1><hr><br><br>", unsafe_allow_html=True)
+    st.write("<h1>A heart felt thankyou to all our contributors ❤</h1><hr><br>", unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns(3)
     with col1:
