@@ -164,12 +164,12 @@ with st.sidebar:
 if selected == "Home":
     home_page()
 
-if selected == "About":
+elif selected == "About":
     about_page()
 
-if selected == "Model":
+elif selected == "Model":
     model_section()
 
-if selected == "Contributors":
+elif selected == "Contributors":
     st.write("## A heart felt thankyou to all of our contributors <br><br>", unsafe_allow_html=True)
     contributors_page()
