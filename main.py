@@ -34,14 +34,14 @@ def home_page():
     st.write(f"""# Water Inspection System""", unsafe_allow_html=True)
     st.image(img_banner)
 
-    st.write(f"""<h1>The Problem</h1> <p>Access to clean water is a critical challenge in many parts of the world, 
+    st.write(f"""<h2>The Problem</h2> <p>Access to clean water is a critical challenge in many parts of the world, 
     including Rwanda. Water quality prediction is important for ensuring the availability of safe and clean water for 
     drinking, agriculture, and other purposes. However, traditional methods for water quality prediction are often 
     time-consuming and costly, and they may not provide accurate and timely information. To address this challenge, 
     the Omdena Rwanda Chapter has initiated a project to develop an automated water quality prediction system using 
     machine learning.</p> """, unsafe_allow_html=True)
 
-    st.write(f"""<h1>Project goals</h1> <p>In this project, the Omdena Rwanda Chapter’s primary goal in this project 
+    st.write(f"""<h2>Project goals</h2> <p>In this project, the Omdena Rwanda Chapter’s primary goal in this project 
     is to develop an accurate and efficient machine learning model that can predict water quality based on a range of 
     parameters such as Electrical conductivity of water, Amount of organic carbon in ppm, Amount of Trihalomethanes 
     in μg/L, and turbidity. The model will be trained on a large dataset of historical water quality data and will be 
@@ -49,7 +49,7 @@ def home_page():
 
 
 def about_page():
-    st.write(f"""<h1>Project background</h1>""", unsafe_allow_html=True)
+    st.write(f"""<h2>Project background</h2>""", unsafe_allow_html=True)
     st.write("""
         <p>Rwanda is a landlocked country located in East Africa, 
         with a population of approximately 13 million people. Despite efforts to improve access to clean water, 
@@ -68,50 +68,48 @@ def about_page():
 
 def model_section():
     st.write('# Predict Water Quality')
-    st.caption('Set these values of these parameters to know if the water quality is suitable to drink or not.')
+    st.caption('Enter these values of the parameters to know if the water quality is suitable to drink or not.')
 
     col1, col2, col3 = st.columns(3, gap="large")
 
-    # setting random values
-
     with col1:
         ColourTCU = st.number_input(label="Colour (TCU)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
-                              key="test_slider0")
+                                    key="test_slider0")
         TurbidityNTU = st.number_input(label="Turbidity (NTU)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
-                                 key="test_slider1")
+                                       key="test_slider1")
         pH = st.number_input(label="pH", min_value=0.0, max_value=1000.0, step=0.1, format="%f", key="test_slider2")
         ConductivityuS = st.number_input(label="Conductivity (uS/cm)", min_value=0.0, max_value=1000.0, step=0.1,
-                                   format="%f", key="test_slider3")
+                                         format="%f", key="test_slider3")
         TotalDissolvedSolids = st.number_input(label="Total Dissolved Solids (mg/l)", min_value=0.0, max_value=1000.0,
-                                         step=0.1, format="%f", key="test_slider4")
+                                               step=0.1, format="%f", key="test_slider4")
         TotalHardness = st.number_input(label="Total Hardness (mg/l as CaCO3)", min_value=0.0, max_value=1000.0,
-                                  step=0.1, format="%f", key="test_slider5")
+                                        step=0.1, format="%f", key="test_slider5")
 
     with col2:
         Aluminium = st.number_input(label="Aluminium (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
-                              key="test_slider6")
+                                    key="test_slider6")
         Chloride = st.number_input(label="Chloride (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
-                             key="test_slider7")
+                                   key="test_slider7")
         Iron = st.number_input(label="Iron (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
-                         key="test_slider8")
+                               key="test_slider8")
         Sodium = st.number_input(label="Sodium (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
-                           key="test_slider9")
+                                 key="test_slider9")
         Sulphate = st.number_input(label="Sulphate (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
-                             key="test_slider10")
+                                   key="test_slider10")
         Zinc = st.number_input(label="Zinc (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
-                         key="test_slider11")
+                               key="test_slider11")
 
     with col3:
         Magnesium = st.number_input(label="Magnesium (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
-                              key="test_slider12")
+                                    key="test_slider12")
         Calcium = st.number_input(label="Calcium (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
-                            key="test_slider13")
+                                  key="test_slider13")
         Potassium = st.number_input(label="Potassium (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
-                              key="test_slider14")
+                                    key="test_slider14")
         Nitrate = st.number_input(label="Nitrate (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
-                            key="test_slider15")
+                                  key="test_slider15")
         Phosphate = st.number_input(label="Phosphate (mg/l)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
-                              key="test_slider16")
+                                    key="test_slider16")
         st.write("<br>", unsafe_allow_html=True)
         predict_button = st.button('  Predict Water Quality  ')
 
@@ -143,6 +141,7 @@ def contributors_page():
         for i in range(10):
             st.write("- contributor name")
 
+    st.write("## A heart felt thankyou to all of our contributors <br><br>", unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
     with col1:
         contributors()
@@ -171,5 +170,4 @@ elif selected == "Model":
     model_section()
 
 elif selected == "Contributors":
-    st.write("## A heart felt thankyou to all of our contributors <br><br>", unsafe_allow_html=True)
     contributors_page()
