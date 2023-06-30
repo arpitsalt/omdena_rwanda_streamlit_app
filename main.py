@@ -50,8 +50,7 @@ def home_page():
 
 
 def about_page():
-    st.write(f"""<h1>Project background</h1><hr>""", unsafe_allow_html=True)
-    st.write("""
+    st.write("""<h1>Project background</h1><hr>
         <p>Rwanda is a landlocked country located in East Africa, 
         with a population of approximately 13 million people. Despite efforts to improve access to clean water, 
         access remains a critical challenge, particularly in rural areas. According to UNICEF, only 47% of the population 
@@ -64,11 +63,12 @@ def about_page():
         water quality. By analyzing large datasets of water quality parameters, machine learning models can identify 
         patterns and relationships between different parameters, enabling accurate predictions of water quality.</p><br>
     """, unsafe_allow_html=True)
+
     st.image(img_banner2)
 
 
 def model_section():
-    st.write("""<h2>Predict Water Quality</h2>
+    st.write("""<h1>Predict Water Quality</h1>
     <p>Enter these values of the parameters to know if the water quality is suitable to drink or not.</p><hr>
     """, unsafe_allow_html=True)
 
@@ -142,7 +142,7 @@ def contributors_page():
         for i in range(10):
             st.write("- contributor name")
 
-    st.write("""<h1 style="text-align: center;">A heartfelt thankyou to all our contributors ❤</h1><hr><br>""", unsafe_allow_html=True)
+    st.write("""<h1 style="text-align: center;">A heartfelt thankyou to all our contributors ❤️</h1><hr><br>""", unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns(3)
     with col1:
