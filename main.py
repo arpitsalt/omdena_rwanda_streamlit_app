@@ -67,11 +67,11 @@ def about_page():
 
 
 def model_section():
-    st.write('# Predict Water Quality')
-    st.caption('Enter these values of the parameters to know if the water quality is suitable to drink or not.')
+    st.write("""<h2>Predict Water Quality</h2>
+    <p>Enter these values of the parameters to know if the water quality is suitable to drink or not.</p><hr>
+    """, unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns(3, gap="large")
-
     with col1:
         ColourTCU = st.number_input(label="Colour (TCU)", min_value=0.0, max_value=1000.0, step=0.1, format="%f",
                                     key="test_slider0")
