@@ -157,19 +157,20 @@ with st.sidebar:
     st.image(img_rwanda)
     selected = option_menu(
         menu_title=None,  # required
-        options=["Home", "About", "Model", "Contributors"],
-        icons=["house", "info-circle", "gear", "people"],  # optional
+        options=["Home", "Check Water Quality", "About" , "Contributors"],
+        icons=["house", "gear", "info-circle", "people"],  # optional
         styles=css_style
     )
 
 if selected == "Home":
     home_page()
 
+
+elif selected == "Check Water Quality":
+    model_section()
+
 elif selected == "About":
     about_page()
-
-elif selected == "Model":
-    model_section()
 
 elif selected == "Contributors":
     contributors_page()
