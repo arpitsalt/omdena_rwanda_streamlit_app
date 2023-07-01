@@ -9,7 +9,7 @@ import random
 from streamlit_option_menu import option_menu
 
 # Configuring Streamlit
-st.set_page_config(page_title="Omdena Rwanda", page_icon=":rwanda:", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Omdena Rwanda", page_icon="🇷🇼", initial_sidebar_state="expanded")
 
 hide_streamlit_style = """
             <style>
