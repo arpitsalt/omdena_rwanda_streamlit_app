@@ -5,10 +5,8 @@ from PIL import Image
 from time import sleep
 import streamlit as st
 from stqdm import stqdm
-import random
 from streamlit_option_menu import option_menu
 
-# Configuring Streamlit
 st.set_page_config(page_title="Omdena Rwanda", page_icon="🇷🇼", initial_sidebar_state="expanded")
 
 hide_streamlit_style = """
@@ -50,7 +48,9 @@ def home_page():
 
 
 def about_page():
-    st.write("""<h1>Project background</h1><hr>
+    st.write("""<h1>Project background</h1>""", unsafe_allow_html=True)
+    st.image(img_banner2)
+    st.write("""
         <p>Rwanda is a landlocked country located in East Africa, 
         with a population of approximately 13 million people. Despite efforts to improve access to clean water, 
         access remains a critical challenge, particularly in rural areas. According to UNICEF, only 47% of the population 
@@ -64,7 +64,6 @@ def about_page():
         patterns and relationships between different parameters, enabling accurate predictions of water quality.</p><br>
     """, unsafe_allow_html=True)
 
-    st.image(img_banner2)
 
 
 def model_section():
@@ -205,6 +204,9 @@ def contributors_page():
                         <tr>
                             <td> Saurabh Bhardwaj  </td>
                             <td> Marwan Ashraf </td>
+                        </tr>
+                        <tr>
+                            <td> Ye Bhone Lin </td>
                         </tr>   
                     </tbody>
                 </table>
@@ -224,7 +226,6 @@ with st.sidebar:
 
 if selected == "Home":
     home_page()
-
 
 elif selected == "Check Water Quality":
     model_section()
