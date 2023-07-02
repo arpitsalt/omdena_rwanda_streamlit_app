@@ -7,6 +7,13 @@ import streamlit as st
 from stqdm import stqdm
 from streamlit_option_menu import option_menu
 
+
+@st.cache_resource
+def load_model():
+    with open('assets/model.pkl', 'rb') as f:
+        return pickle.load(f)
+
+
 st.set_page_config(page_title="Omdena Rwanda", page_icon="🇷🇼", initial_sidebar_state="expanded")
 
 hide_streamlit_style = """
@@ -63,7 +70,6 @@ def about_page():
         water quality. By analyzing large datasets of water quality parameters, machine learning models can identify 
         patterns and relationships between different parameters, enabling accurate predictions of water quality.</p><br>
     """, unsafe_allow_html=True)
-
 
 
 def model_section():
@@ -123,10 +129,8 @@ def model_section():
                               'Potassium (mg/l)': [Potassium], 'Nitrate (mg/l)': [Nitrate],
                               'Phosphate (mg/l)': [Phosphate]})
 
-    with open('assets/model.pkl', 'rb') as f:
-        model = pickle.load(f)
-
     if predict_button:
+        model = load_model()
         result = model.predict(dataframe)
         for _ in stqdm(range(50)):
             sleep(0.015)
