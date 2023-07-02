@@ -138,27 +138,87 @@ def model_section():
 
 
 def contributors_page():
-    def contributors():
-        for i in range(10):
-            st.write("- contributor name")
-
-    st.write("""<h1 style="text-align: center;">A heartfelt thankyou to all our contributors ❤️</h1><hr><br>""", unsafe_allow_html=True)
-
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        contributors()
-    with col2:
-        contributors()
-    with col3:
-        contributors()
+    st.write("""
+                <h1 style="text-align: center; color:#FFF6F4;">A heartfelt thankyou to all our contributors ❤️</h1><hr>
+                <div style="text-align:center;">
+                <table>
+                <tr>
+                    <th width="20%" style="font-size: 140%;">Chapter Name</th>    
+                    <th width="20%" style="font-size: 140%;">Chapter Lead</th>    
+                </tr>
+                <tr>
+                    <td>Kigali, Rwanda Chapter</td>    
+                    <td>Samiratu Ntohsi</td>    
+                </tr>
+                </table>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th width="20%" style="font-size: 140%;">Task Name</th>
+                            <th width="20%" style="font-size: 140%;">Task Lead</th>
+                        </tr>
+                        <tr>
+                            <td>Knowledge</td>
+                            <td>Pritam Bhakta</td>
+                        </tr>
+                        <tr>
+                            <td>Data Collection</td>
+                            <td>Swamesh Lotlikar</td>
+                        </tr>
+                        <tr>
+                            <td>Data Preprocessing</td>
+                            <td>Qutaiba Ahmed Ansari</td>
+                        </tr>
+                        <tr>
+                            <td>Data Analysis</td>
+                            <td>Qutaiba Ahmed Ansari</td>
+                        </tr>
+                        <tr>
+                            <td>Modeling</td>
+                            <td>Bibhuti Baibhav Borah</td>
+                        </tr>
+                        <tr>
+                            <td>Deployment</td>
+                            <td>Vinod Cherian</td>
+                        </tr>
+                        <tr>
+                            <td>Documentation & Articles</td>
+                            <td>Fen</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th width="20%" style="font-size: 140%;" colspan="2">Contributors</th>
+                        </tr>
+                        <tr>
+                            <td width="20%"> Akunna Anyamkpa </td>
+                            <td width="20%"> Alpha Lossangoyi-Nanga </td>
+                        </tr>
+                        <tr>
+                            <td> Arpit Sengar  </td>
+                            <td>Istiaque Ahamed</td>
+                        </tr>
+                        <tr>
+                            <td> Saurabh Bhardwaj  </td>
+                            <td> Marwan Ashraf </td>
+                        </tr>   
+                    </tbody>
+                </table>
+                </div>
+                <hr>
+            """, unsafe_allow_html=True)
 
 
 with st.sidebar:
     st.image(img_rwanda)
     selected = option_menu(
-        menu_title=None,  # required
-        options=["Home", "Check Water Quality", "About" , "Contributors"],
-        icons=["house", "gear", "info-circle", "people"],  # optional
+        menu_title=None,
+        options=["Home", "Check Water Quality", "About", "Contributors"],
+        icons=["house", "gear", "info-circle", "people"],
         styles=css_style
     )
 
