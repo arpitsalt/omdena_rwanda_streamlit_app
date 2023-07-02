@@ -206,8 +206,8 @@ def contributors_page():
                             <td>Istiaque Ahamed</td>
                         </tr>
                         <tr>
-                            <td> Saurabh Bhardwaj  </td>
                             <td> Marwan Ashraf </td>
+                            <td> Saurabh Bhardwaj  </td>
                         </tr>
                         <tr>
                             <td> Ye Bhone Lin </td>
