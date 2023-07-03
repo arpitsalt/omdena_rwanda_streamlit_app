@@ -198,20 +198,37 @@ def contributors_page():
                             <th width="20%" style="font-size: 140%;" colspan="2">Contributors</th>
                         </tr>
                         <tr>
-                            <td width="20%"> Akunna Anyamkpa </td>
-                            <td width="20%"> Alpha Lossangoyi-Nanga </td>
+                            <td width="20%"> Akunna Anyamkpa</td>
+                            <td width="20%"> Alka Gupta</td>
                         </tr>
                         <tr>
-                            <td> Arpit Sengar  </td>
+                            <td>Alpha Lossangoyi Nanga</td>
+                            <td>Arpit Sengar </td>
+                        </tr>
+                        <tr>
+                            <td>Ekta</td>
+                            <td>Indrajith C</td>
+                        </tr>
+                        <tr>
                             <td>Istiaque Ahamed</td>
+                            <td>Marwan Ashraf</td>
                         </tr>
                         <tr>
-                            <td> Marwan Ashraf </td>
-                            <td> Saurabh Bhardwaj  </td>
+                            <td>Lael</td>
+                            <td>Leonardo Goliatt</td>
                         </tr>
                         <tr>
-                            <td> Ye Bhone Lin </td>
-                        </tr>   
+                            <td>Nermin Elgrawany</td>
+                            <td>Okwor Danielchinedu</td>
+                        </tr>
+                        <tr>
+                            <td>Ranjana Sundar</td>
+                            <td>Saurabh Bhardwaj</td>
+                        </tr>
+                        <tr>
+                            <td>Shnehi Karki</td>
+                            <td>Ye Bhone Lin</td>
+                        </tr>
                     </tbody>
                 </table>
                 </div>
@@ -239,3 +256,4 @@ elif selected == "About":
 
 elif selected == "Contributors":
     contributors_page()
+
