@@ -241,7 +241,7 @@ with st.sidebar:
     selected = option_menu(
         menu_title=None,
         options=["Home", "Check Water Quality", "About", "Contributors"],
-        icons=["house", "gear", "info-circle", "people"],
+        icons=["house", "droplet", "info-circle", "people"],
         styles=css_style
     )
 
