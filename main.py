@@ -92,17 +92,17 @@ def model_section():
                                         step=50.0, format="%f", key="test_slider5")
 
     with col2:
-        Aluminium = st.number_input(label="Aluminium (mg/l)", min_value=0.0, max_value=0.5, step=0.1, format="%f",
+        Aluminium = st.number_input(label="Aluminium (mg/l)", min_value=0.0, max_value=1.0, step=0.2, format="%f",
                                     key="test_slider6")
         Chloride = st.number_input(label="Chloride (mg/l)", min_value=0.0, max_value=250.0, step=50.0, format="%f",
                                    key="test_slider7")
-        Iron = st.number_input(label="Iron (mg/l)", min_value=0.0, max_value=0.5, step=0.1, format="%f",
+        Iron = st.number_input(label="Iron (mg/l)", min_value=0.0, max_value=1.0, step=0.2, format="%f",
                                key="test_slider8")
         Sodium = st.number_input(label="Sodium (mg/l)", min_value=0.0, max_value=200.0, step=50.0, format="%f",
                                  key="test_slider9")
         Sulphate = st.number_input(label="Sulphate (mg/l)", min_value=0.0, max_value=400.0, step=50.0, format="%f",
                                    key="test_slider10")
-        Zinc = st.number_input(label="Zinc (mg/l)", min_value=0.0, max_value=5.0, step=1.0, format="%f",
+        Zinc = st.number_input(label="Zinc (mg/l)", min_value=0.0, max_value=5.0, step=0.2, format="%f",
                                key="test_slider11")
 
     with col3:
@@ -112,9 +112,9 @@ def model_section():
                                   key="test_slider13")
         Potassium = st.number_input(label="Potassium (mg/l)", min_value=0.0, max_value=50.0, step=5.0, format="%f",
                                     key="test_slider14")
-        Nitrate = st.number_input(label="Nitrate (mg/l)", min_value=0.0, max_value=45.0, step=5.0, format="%f",
+        Nitrate = st.number_input(label="Nitrate (mg/l)", min_value=0.0, max_value=50.0, step=5.0, format="%f",
                                   key="test_slider15")
-        Phosphate = st.number_input(label="Phosphate (mg/l)", min_value=0.0, max_value=2.2, step=0.1, format="%f",
+        Phosphate = st.number_input(label="Phosphate (mg/l)", min_value=0.0, max_value=5.0, step=0.2, format="%f",
                                     key="test_slider16")
         st.write("<br>", unsafe_allow_html=True)
         predict_button = st.button('  Predict Water Quality  ')
