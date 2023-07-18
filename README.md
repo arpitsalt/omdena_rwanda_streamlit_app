@@ -1,7 +1,7 @@
 # Water Quality Prediction System
 
 This project is a water quality prediction system developed for Omdena's Rwanda Chapter. The system utilizes the Streamlit framework to provide an interactive user interface for predicting water quality in different locations.
-
+You can access the web app using this link: [Water Quality Prediction System](https://water-quality-prediction-app.streamlit.app)
 
 ## Project Overview
 
